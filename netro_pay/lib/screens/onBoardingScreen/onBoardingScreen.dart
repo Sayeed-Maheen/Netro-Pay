@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:netro_pay/screens/reasonScreen.dart';
 
 import '../../appColors/appColors.dart';
 import '../../models/onBoardingModel.dart';
@@ -47,7 +48,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               decoration: BoxDecoration(),
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -72,10 +73,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       contents[i].discription,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        height: 1.2,
-                        color: AppColors.grey,
-                        fontSize: 15,
-                      ),
+                          height: 1.2,
+                          color: AppColors.grey,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
                     ),
                     SizedBox(height: 30.h),
                     Container(
@@ -100,10 +101,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       child: MaterialButton(
                         onPressed: () {
                           if (currentIndex == contents.length - 1) {
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: (_) => MultipleLoginScreen()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => ReasonScreen()));
                           }
                           _controller.nextPage(
                             duration: Duration(milliseconds: 100),
