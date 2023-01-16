@@ -154,7 +154,7 @@ class ReasonScreenState extends State<ReasonScreen> {
                   ),
                 ),
                 SizedBox(height: 120.h),
-                Center(child: MyButton(onPressed: () {}, text: 'NEXT'))
+                Center(child: MyButton(onPressed: () {}, text: 'Next'))
               ],
             ),
           ),

@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:netro_pay/appColors/appColors.dart';
 import 'package:netro_pay/screens/splashScreen/splashScreen.dart';
-
 import 'widgets/customSwatch.dart';
 
 void main() {

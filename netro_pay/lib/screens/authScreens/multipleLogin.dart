@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:netro_pay/screens/authScreens/loginScreen.dart';
 import '../../appColors/appColors.dart';
 import '../../widgets/myButton.dart';
 
@@ -147,8 +148,8 @@ class MultipleLoginScreen extends StatelessWidget {
               SizedBox(height: 15.h),
               MyButton(
                   onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => SignInScreen()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
                   },
                   text: "SIGN IN WITH PASSWORD"),
               SizedBox(height: 10.h),
