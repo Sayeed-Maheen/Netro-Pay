@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:netro_pay/screens/authScreens/forgotPassword/forgotPassword.dart';
 import 'package:netro_pay/screens/authScreens/signUpScreen.dart';
 import 'package:netro_pay/screens/homeScreen/homeScreen.dart';
+import 'package:netro_pay/widgets/bottomNav.dart';
 import 'package:netro_pay/widgets/rememberMe.dart';
 import '../../appColors/appColors.dart';
 import '../../widgets/myButton.dart';
@@ -90,7 +91,7 @@ class LoginScreen extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomeScreen()));
+                                    builder: (context) => MyBottomNav()));
                           },
                           text: 'Sign In')),
                   SizedBox(height: 20.h),

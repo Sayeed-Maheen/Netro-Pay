@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:netro_pay/appColors/appColors.dart';
+import 'package:netro_pay/screens/residency.dart';
 import 'package:netro_pay/widgets/myButton.dart';
 
 class ReasonScreen extends StatefulWidget {
@@ -154,7 +155,15 @@ class ReasonScreenState extends State<ReasonScreen> {
                   ),
                 ),
                 SizedBox(height: 120.h),
-                Center(child: MyButton(onPressed: () {}, text: 'Next'))
+                Center(
+                    child: MyButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Residency()));
+                        },
+                        text: 'Next'))
               ],
             ),
           ),

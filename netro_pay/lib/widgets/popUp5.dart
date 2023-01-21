@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:netro_pay/screens/reasonScreen.dart';
+import 'package:netro_pay/screens/homeScreen/homeScreen.dart';
 import 'package:netro_pay/widgets/bottomNav.dart';
-
 import '../appColors/appColors.dart';
-import '../screens/homeScreen/homeScreen.dart';
 import 'myButton.dart';
 
-class PopUp2 extends StatefulWidget {
-  const PopUp2({super.key});
+class PopUp5 extends StatefulWidget {
+  const PopUp5({super.key});
 
   @override
-  State<PopUp2> createState() => _PopUp2State();
+  State<PopUp5> createState() => _PopUp5State();
 }
 
-class _PopUp2State extends State<PopUp2> {
+class _PopUp5State extends State<PopUp5> {
   Future<void> _showSimpleDialog() async {
     await showDialog<void>(
         context: context,
@@ -31,7 +29,7 @@ class _PopUp2State extends State<PopUp2> {
               SimpleDialogOption(
                 child: Center(
                   child: Text(
-                    'Successful!',
+                    'Successful!!',
                     style: TextStyle(
                         fontSize: 24,
                         color: AppColors.green,
@@ -41,13 +39,13 @@ class _PopUp2State extends State<PopUp2> {
               ),
               SimpleDialogOption(
                 child: const Text(
-                  'Your password change successfully. Account Ready to use now!',
+                  'Please wait a moment, we are preparing for you',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 14,
-                      color: AppColors.grey,
-                      fontWeight: FontWeight.w600,
-                      height: 1.2),
+                    fontSize: 14,
+                    color: AppColors.grey2,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
               SimpleDialogOption(
@@ -56,7 +54,7 @@ class _PopUp2State extends State<PopUp2> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => MyBottomNav()));
                 },
-                text: 'Go to Home',
+                text: 'Explore Now',
               )),
             ],
           );
@@ -66,7 +64,26 @@ class _PopUp2State extends State<PopUp2> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: MyButton(onPressed: _showSimpleDialog, text: 'Update'),
+      child: InkWell(
+        onTap: _showSimpleDialog,
+        child: Container(
+          height: 52.h,
+          width: 158.w,
+          decoration: BoxDecoration(
+              color: AppColors.themeColor,
+              borderRadius: BorderRadius.circular(12)),
+          child: Center(
+            child: Text(
+              "Next",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: AppColors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
