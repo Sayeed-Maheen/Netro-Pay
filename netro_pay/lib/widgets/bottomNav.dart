@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:netro_pay/appColors/appColors.dart';
+import 'package:netro_pay/screens/homeScreen/balance.dart';
 import 'package:netro_pay/screens/homeScreen/notification.dart';
 import 'package:netro_pay/screens/profileScreen/profileScreen.dart';
+import 'package:netro_pay/screens/profileScreen/settings.dart';
+import 'package:netro_pay/screens/profileScreen/statement.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../screens/homeScreen/qrScreen.dart';
@@ -119,6 +122,12 @@ class _MyBottomNavState extends State<MyBottomNav> {
                             Column(
                               children: [
                                 InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Balance()));
+                                  },
                                   child: Container(
                                     height: 48.h,
                                     width: 48.w,
@@ -794,34 +803,42 @@ class _MyBottomNavState extends State<MyBottomNav> {
                           color: AppColors.grey,
                         ),
                       ),
-                      Container(
-                        child: Padding(
-                          padding: const EdgeInsets.all(12),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.text_snippet,
-                                    color: AppColors.themeColor,
-                                  ),
-                                  SizedBox(width: 10.w),
-                                  Text(
-                                    'Statement',
-                                    style: TextStyle(
-                                        color: AppColors.black,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              ),
-                              Icon(
-                                Icons.arrow_forward_ios,
-                                color: AppColors.grey2,
-                                size: 18,
-                              ),
-                            ],
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Statement()));
+                        },
+                        child: Container(
+                          child: Padding(
+                            padding: const EdgeInsets.all(12),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.text_snippet,
+                                      color: AppColors.themeColor,
+                                    ),
+                                    SizedBox(width: 10.w),
+                                    Text(
+                                      'Statement',
+                                      style: TextStyle(
+                                          color: AppColors.black,
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: AppColors.grey2,
+                                  size: 18,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -984,34 +1001,42 @@ class _MyBottomNavState extends State<MyBottomNav> {
                           color: AppColors.grey,
                         ),
                       ),
-                      Container(
-                        child: Padding(
-                          padding: const EdgeInsets.all(12),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.settings,
-                                    color: AppColors.themeColor,
-                                  ),
-                                  SizedBox(width: 10.w),
-                                  Text(
-                                    'Settings',
-                                    style: TextStyle(
-                                        color: AppColors.black,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              ),
-                              Icon(
-                                Icons.arrow_forward_ios,
-                                color: AppColors.grey2,
-                                size: 18,
-                              ),
-                            ],
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SettingsScreen()));
+                        },
+                        child: Container(
+                          child: Padding(
+                            padding: const EdgeInsets.all(12),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.settings,
+                                      color: AppColors.themeColor,
+                                    ),
+                                    SizedBox(width: 10.w),
+                                    Text(
+                                      'Settings',
+                                      style: TextStyle(
+                                          color: AppColors.black,
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: AppColors.grey2,
+                                  size: 18,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
