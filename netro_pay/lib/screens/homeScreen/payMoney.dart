@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:netro_pay/screens/homeScreen/reqMoney4.dart';
-import 'package:netro_pay/screens/homeScreen/sendMoney4.dart';
+import 'package:netro_pay/widgets/popUp6.dart';
 import '../../appColors/appColors.dart';
+import '../../widgets/popUp8.dart';
 
-class ReqMoney3 extends StatelessWidget {
-  const ReqMoney3({super.key});
+class PayMoney extends StatelessWidget {
+  const PayMoney({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class ReqMoney3 extends StatelessWidget {
                               Icon(Icons.arrow_back, color: AppColors.black)),
                       SizedBox(width: 10.w),
                       Text(
-                        "Request Money",
+                        "Pay Money",
                         style: TextStyle(
                             color: AppColors.black,
                             fontSize: 16,
@@ -46,81 +46,12 @@ class ReqMoney3 extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(12),
-                          child: Container(
-                            height: 56.h,
-                            width: double.infinity,
-                            child: TextField(
-                              onSubmitted: (value) {
-                                // Navigator.push(
-                                //     context,
-                                //     MaterialPageRoute(
-                                //         builder: (context) => SearchErrorScreen()));
-                              },
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w400),
-                              decoration: InputDecoration(
-                                hintStyle: TextStyle(color: Colors.black),
-                                hintText: "To",
-                                filled: true,
-                                fillColor: AppColors.white,
-                                focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: AppColors.lightBlue, width: 1.w),
-                                    borderRadius: BorderRadius.circular(12)),
-                                enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: AppColors.lightBlue, width: 1.w),
-                                    borderRadius: BorderRadius.circular(8)),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 10.h),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 12),
-                          child: Text(
-                            "All Contacts",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: AppColors.black,
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Container(
-                          height: 56.h,
-                          width: double.infinity,
-                          child: TextField(
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w400),
-                            decoration: InputDecoration(
-                                prefixIcon: Icon(
-                                  Icons.search,
-                                  color: AppColors.black,
-                                  size: 20,
-                                ),
-                                hintStyle: TextStyle(color: AppColors.black),
-                                hintText: "Pilu Santos",
-                                filled: true,
-                                fillColor: AppColors.white,
-                                border: InputBorder.none),
-                          ),
-                        ),
-                        SizedBox(height: 5.h),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Divider(height: 1, color: AppColors.grey),
-                        ),
                         InkWell(
                           onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ReqMoney4()));
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => Summary()));
                           },
                           child: Container(
                             height: 70.h,
@@ -176,7 +107,85 @@ class ReqMoney3 extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(height: 10.h),
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: AppColors.white,
+                        borderRadius: BorderRadius.circular(12)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(height: 20.h),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Text(
+                            "Enter the Amount",
+                            style: TextStyle(
+                                color: AppColors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        SizedBox(height: 20.h),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 12),
+                          child: TextField(
+                            decoration: new InputDecoration(
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: AppColors.lightBlue, width: 1.w),
+                                    borderRadius: BorderRadius.circular(12)),
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: AppColors.lightBlue, width: 1.w),
+                                    borderRadius: BorderRadius.circular(12)),
+                                hintText: '150',
+                                hintStyle: TextStyle(
+                                  color: AppColors.themeColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 24,
+                                )),
+                          ),
+                        ),
+                        SizedBox(height: 20.h),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Text(
+                            "Add a Note (Optional)",
+                            style: TextStyle(
+                                color: AppColors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        SizedBox(height: 20.h),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(color: AppColors.lightBlue)),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 12, vertical: 12),
+                              child: Text(
+                                "Hello Pilu Santos, I would like to request my payment for the work on a design project the other day. I hope to get paid soon. Thank you",
+                                style: TextStyle(
+                                    color: AppColors.grey,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 20.h),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 150.h),
+                  Center(child: PopUp8()),
                 ],
               ),
             ),

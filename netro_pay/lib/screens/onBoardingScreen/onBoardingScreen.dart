@@ -140,7 +140,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       margin: EdgeInsets.all(2),
       width: currentIndex == index ? 15.w : 8.w,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25), color: AppColors.themeColor),
+          borderRadius: BorderRadius.circular(25),
+          color: currentIndex == index
+              ? AppColors.themeColor
+              : Color.fromARGB(255, 205, 205, 205)),
     );
   }
 }

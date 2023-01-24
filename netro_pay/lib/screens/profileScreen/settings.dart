@@ -141,11 +141,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       dropdownIconPosition: IconPosition.trailing,
                       decoration: InputDecoration(
                         labelText: 'Phone',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide:
-                              BorderSide(width: 1, color: AppColors.lightBlue),
-                        ),
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                color: AppColors.lightBlue, width: 1.w),
+                            borderRadius: BorderRadius.circular(12)),
                       ),
                       initialCountryCode: 'US',
                       onChanged: (phone) {

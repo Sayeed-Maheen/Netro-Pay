@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:netro_pay/appColors/appColors.dart';
 import 'package:netro_pay/screens/homeScreen/balance.dart';
+import 'package:netro_pay/screens/homeScreen/bankService.dart';
+import 'package:netro_pay/screens/homeScreen/invoice2.dart';
+import 'package:netro_pay/screens/homeScreen/moneyReq.dart';
 import 'package:netro_pay/screens/homeScreen/notification.dart';
+import 'package:netro_pay/screens/homeScreen/payBill.dart';
 import 'package:netro_pay/screens/homeScreen/reqMoney.dart';
 import 'package:netro_pay/screens/profileScreen/faq.dart';
 import 'package:netro_pay/screens/profileScreen/privacyPolicy.dart';
@@ -286,11 +290,20 @@ class _MyBottomNavState extends State<MyBottomNav> {
                             children: [
                               Column(
                                 children: [
-                                  Container(
-                                      height: 45.h,
-                                      width: 45.w,
-                                      child: Image.asset(
-                                          'assets/images/create.png')),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  InVoice2()));
+                                    },
+                                    child: Container(
+                                        height: 45.h,
+                                        width: 45.w,
+                                        child: Image.asset(
+                                            'assets/images/create.png')),
+                                  ),
                                   SizedBox(height: 10.h),
                                   Text(
                                     'Create Invoice',
@@ -304,11 +317,19 @@ class _MyBottomNavState extends State<MyBottomNav> {
                               SizedBox(width: 10.w),
                               Column(
                                 children: [
-                                  Container(
-                                      height: 45.h,
-                                      width: 45.w,
-                                      child: Image.asset(
-                                          'assets/images/bill.png')),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => PayBill()));
+                                    },
+                                    child: Container(
+                                        height: 45.h,
+                                        width: 45.w,
+                                        child: Image.asset(
+                                            'assets/images/bill.png')),
+                                  ),
                                   SizedBox(height: 10.h),
                                   Text(
                                     'Pay Bills',
@@ -322,11 +343,20 @@ class _MyBottomNavState extends State<MyBottomNav> {
                               SizedBox(width: 10.w),
                               Column(
                                 children: [
-                                  Container(
-                                      height: 45.h,
-                                      width: 45.w,
-                                      child: Image.asset(
-                                          'assets/images/bank.png')),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  BankService()));
+                                    },
+                                    child: Container(
+                                        height: 45.h,
+                                        width: 45.w,
+                                        child: Image.asset(
+                                            'assets/images/bank.png')),
+                                  ),
                                   SizedBox(height: 10.h),
                                   Text(
                                     'Bank Transfer',
@@ -363,11 +393,19 @@ class _MyBottomNavState extends State<MyBottomNav> {
                             children: [
                               Column(
                                 children: [
-                                  Container(
-                                      height: 45.h,
-                                      width: 45.w,
-                                      child: Image.asset(
-                                          'assets/images/bulb.png')),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => PayBill()));
+                                    },
+                                    child: Container(
+                                        height: 45.h,
+                                        width: 45.w,
+                                        child: Image.asset(
+                                            'assets/images/bulb.png')),
+                                  ),
                                   SizedBox(height: 10.h),
                                   Text(
                                     'Electricity',
@@ -381,11 +419,19 @@ class _MyBottomNavState extends State<MyBottomNav> {
                               SizedBox(width: 10.w),
                               Column(
                                 children: [
-                                  Container(
-                                      height: 45.h,
-                                      width: 45.w,
-                                      child: Image.asset(
-                                          'assets/images/movie.png')),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => PayBill()));
+                                    },
+                                    child: Container(
+                                        height: 45.h,
+                                        width: 45.w,
+                                        child: Image.asset(
+                                            'assets/images/movie.png')),
+                                  ),
                                   SizedBox(height: 10.h),
                                   Text(
                                     'Movie',
@@ -399,11 +445,20 @@ class _MyBottomNavState extends State<MyBottomNav> {
                               SizedBox(width: 10.w),
                               Column(
                                 children: [
-                                  Container(
-                                      height: 45.h,
-                                      width: 45.w,
-                                      child: Image.asset(
-                                          'assets/images/money.png')),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  MoneyReq()));
+                                    },
+                                    child: Container(
+                                        height: 45.h,
+                                        width: 45.w,
+                                        child: Image.asset(
+                                            'assets/images/money.png')),
+                                  ),
                                   SizedBox(height: 10.h),
                                   Text(
                                     'Add Money',
@@ -417,11 +472,20 @@ class _MyBottomNavState extends State<MyBottomNav> {
                               SizedBox(width: 10.w),
                               Column(
                                 children: [
-                                  Container(
-                                      height: 45.h,
-                                      width: 45.w,
-                                      child: Image.asset(
-                                          'assets/images/share.png')),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  QrScreen()));
+                                    },
+                                    child: Container(
+                                        height: 45.h,
+                                        width: 45.w,
+                                        child: Image.asset(
+                                            'assets/images/share.png')),
+                                  ),
                                   SizedBox(height: 10.h),
                                   Text(
                                     'Share',

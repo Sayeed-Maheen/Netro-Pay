@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:netro_pay/widgets/myButton.dart';
+import 'package:netro_pay/widgets/popUp11.dart';
 import 'package:netro_pay/widgets/popUp6.dart';
 import '../../appColors/appColors.dart';
+import '../../widgets/popUp10.dart';
 
-class ReqMoney4 extends StatelessWidget {
-  const ReqMoney4({super.key});
+class MoneyReq4 extends StatelessWidget {
+  const MoneyReq4({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -188,7 +191,99 @@ class ReqMoney4 extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 150.h),
-                  Center(child: PopUp6()),
+                  Center(
+                      child: MyButton(
+                    onPressed: () {
+                      showModalBottomSheet<void>(
+                        backgroundColor: AppColors.white,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(24.0),
+                            topRight: Radius.circular(24.0),
+                          ),
+                        ),
+                        isScrollControlled: true,
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Container(
+                            height: MediaQuery.of(context).size.height * 0.40,
+                            child: Padding(
+                              padding: const EdgeInsets.all(12),
+                              child: SizedBox(
+                                //height: 10.h,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    SizedBox(height: 10.h),
+                                    Center(
+                                      child: Text(
+                                        'Review Summary',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: AppColors.black,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(height: 10.h),
+                                    Padding(
+                                      padding: const EdgeInsets.all(12),
+                                      child: Divider(
+                                        height: 1,
+                                        color: AppColors.grey,
+                                      ),
+                                    ),
+                                    SizedBox(height: 10.h),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 12, vertical: 10),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            'Your Request',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: AppColors.grey2,
+                                              fontSize: 14,
+                                            ),
+                                          ),
+                                          Text(
+                                            "\u0024" + "200",
+                                            style: TextStyle(
+                                                color: AppColors.black,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    SizedBox(height: 10.h),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 12, vertical: 10),
+                                      child: Text(
+                                        'If you are requesting money for a purchase, you will pay a seller fee when Daniel Dason pays you. You could be covered bay Seller Protection.',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: AppColors.grey2,
+                                          fontSize: 12,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(height: 10.h),
+                                    PopUp11()
+                                  ],
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    },
+                    text: 'Send Request',
+                  )),
                 ],
               ),
             ),

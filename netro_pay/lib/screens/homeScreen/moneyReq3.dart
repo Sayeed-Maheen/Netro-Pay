@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:netro_pay/screens/homeScreen/moneyReq4.dart';
 import 'package:netro_pay/screens/homeScreen/reqMoney4.dart';
-import 'package:netro_pay/screens/homeScreen/sendMoney4.dart';
 import '../../appColors/appColors.dart';
 
-class ReqMoney3 extends StatelessWidget {
-  const ReqMoney3({super.key});
+class MoneyReq3 extends StatelessWidget {
+  const MoneyReq3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -120,7 +120,7 @@ class ReqMoney3 extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ReqMoney4()));
+                                    builder: (context) => MoneyReq4()));
                           },
                           child: Container(
                             height: 70.h,

@@ -114,7 +114,7 @@ class Faq extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16),
                           child: Container(
-                            height: 80.h,
+                            height: 82.h,
                             width: double.infinity,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -186,13 +186,13 @@ class Faq extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16),
                           child: Container(
-                            height: 45.h,
+                            height: 50.h,
                             width: double.infinity,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "Form where I can Cash in my Netropay Account?",
+                                  "Form where I can Cash in my Netropay \nAccount?",
                                   style: TextStyle(
                                       color: AppColors.grey2,
                                       fontSize: 14,
